@@ -1,0 +1,68 @@
+.arrierePlan{
+-fx-background-image: url('backg.jpg');
+ 
+}
+
+.styleTitre {
+  -fx-alignment: center;
+  -fx-font-size : 38px;
+  -fx-font-family: "Arial";
+  -fx-font-weight: bold;
+  -fx-font-style: italic; 
+  -fx-text-fill: black;
+}
+ 
+.textNiveau {
+ 
+  -fx-margin-left: 400px;
+  -fx-font-size : 24px;
+  -fx-font-family: "Arial";
+  -fx-font-weight: bold; 
+  -fx-font-style: italic; 
+  -fx-text-fill: black;
+  -fx-padding: 20 10 10 15;
+}
+.conteneurTableJeu {
+  -fx-alignment: center;
+}
+.conteneurBoutons {
+  -fx-position: right;
+  -fx-margin-left: 200px;
+  -fx-min-width: 60px;
+  -fx-pref-width: 180px;
+  -fx-max-width: 600px;
+  -fx-min-height: 40px;
+  -fx-pref-height: 60px;
+  -fx-max-height: 400px;
+}
+.conteneurBouton {
+  -fx-alignment: center;
+  -fx-min-height: 40px;
+  -fx-pref-height: 60px;
+  -fx-max-height: 400px;
+}
+.boutonCoup {
+ 
+  -fx-background-image: url('backg.jpg');
+  -fx-text-color: #305ae1;
+  -fx-background-radius: 20px 20px 20px 20px;
+  -fx-border-radius: 20px 20px 20px 20px;
+}
+.boutonCoup:hover {
+  -fx-border-color: #6495ED;
+}
+.boutonCoup:pressed {
+  -fx-background-color: #305ae1;
+}
+
+.boutonOkAnnuler {
+ -fx-background-image: url('backg.jpg');
+  -fx-text-color: #305ae1;
+ 
+}
+.boutonOkAnnuler:hover {
+  -fx-border-color: #6495ED;
+}
+.boutonOkAnnuler:pressed {
+  -fx-background-color: #00FFFF;
+}

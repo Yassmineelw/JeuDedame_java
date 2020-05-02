@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import JeuDeDame.vues.composants.VboxAnim?>
+
+<VboxAnim fx:controller="JeuDeDame.vues.VueParametresFX" VBox.vgrow="ALWAYS"
+ xmlns:fx="http://javafx.com/fxml" prefWidth="650.0" 
+ prefHeight="400.0" styleClass="arrierePlan"> 
+
+<HBox styleClass="styleTitre"  prefHeight="74.0" prefWidth="600.0" VBox.Vgrow="ALWAYS" >
+
+            <Label  styleClass="styleTitre"  text="%Niveaudedifficulter">
+
+            </Label>
+   </HBox>
+        
+<VBox prefWidth="600.0" prefHeight="185.0" styleClass="boutonCoup" VBox.Vgrow="ALWAYS">
+
+     
+<RadioButton prefWidth="139.0" prefHeight="73.0" styleClass="textNiveau" text="%Facile"  mnemonicParsing="false">
+
+<toggleGroup>
+
+<ToggleGroup fx:id="toggle"/>
+
+</toggleGroup>
+
+</RadioButton>
+
+<RadioButton prefWidth="204.0" prefHeight="65.0" styleClass="textNiveau" text="%Moyen"  mnemonicParsing="false" toggleGroup="$toggle"/>
+
+<RadioButton prefWidth="204.0" prefHeight="77.0" styleClass="textNiveau" text="%Difficile"  mnemonicParsing="false" toggleGroup="$toggle"/>
+
+
+</VBox>
+
+<HBox prefWidth="106.0" prefHeight="100.0" styleClass="boutonOkAnnuler" VBox.Vgrow="ALWAYS">
+ 
+<Button fx:id="boutonRetour" prefWidth="113.0" prefHeight="47.0" text="%Retour"  mnemonicParsing="false" translateX="366.0" alignment="CENTER" textAlignment="CENTER">
+
+
+<HBox.margin>
+
+<Insets/>
+
+</HBox.margin>
+
+</Button>
+
+<Button  fx:id="boutonChangerLangue" text="%changerLangue" prefWidth="111.0" prefHeight="48.0" mnemonicParsing="false" translateX="0.0" style="-fx-alignment: center;" alignment="TOP_RIGHT">
+
+
+<HBox.margin>
+
+<Insets/>
+
+</HBox.margin>
+
+</Button>
+
+</HBox>
+  
+</VboxAnim>
