@@ -1,17 +1,13 @@
 package JeuDeDame_client.afficheurs;
 
-
-import commun.debogage.J;
-import commun.modeles.Modele;
-import commun_client.mvc.Afficheur;
-import JeuDeDame.modeles.partie_locale.PartieLocaleLectureSeule;
+import JeuDeDame.modeles.partie_locale.PartieLocaleLectureSeule; 
 import JeuDeDame_client.vues.VuePartieLocale;
+import commun.debogage.J;
+ 
+public abstract class   AfficheurPartieLocale<V extends VuePartieLocale>
 
-public abstract class AfficheurPartieLocale<V extends VuePartieLocale> 
-
-                            extends Afficheur<PartieLocaleLectureSeule, 
-                                              V> {
-
+                extends AfficheurPartie<PartieLocaleLectureSeule, V>  {
+	
     @Override
     public void initialiserAffichage(PartieLocaleLectureSeule partieLectureSeule, VuePartieLocale vue) {
         J.appel(this);
@@ -23,4 +19,6 @@ public abstract class AfficheurPartieLocale<V extends VuePartieLocale>
         J.appel(this);
 
     }
+
+
 }

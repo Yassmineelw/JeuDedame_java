@@ -1,4 +1,4 @@
-package JeuDeDame.controleurs;
+package JeuDeDame.controleurs; 
 
 import java.util.Locale;
 
@@ -10,6 +10,8 @@ import JeuDeDame.modeles.parametres.ParametresLectureSeule;
 import JeuDeDame.modeles.partie_locale.PartieLocale;
 import JeuDeDame_client.commandes.changer_locale.ChangerLocale;
 import JeuDeDame_client.commandes.changer_locale.ChangerLocaleRecue;
+//import TicTacToe_client.commandes.changer_locale.ChangerLocale;
+//import TicTacToe_client.commandes.changer_locale.ChangerLocaleRecue;
 import JeuDeDame_client.commandes.nouvelle_partie.NouvellePartie;
 import JeuDeDame_client.commandes.nouvelle_partie.NouvellePartieRecue;
 import JeuDeDame_client.commandes.ouvrir_parametres.OuvrirParametres;
@@ -31,7 +33,7 @@ public class ControleurPagesFX extends ControleurPages<VuePagesFX> {
 	public static ParametresLectureSeule getParametres() {
 		J.appel(ControleurAccueilFX.class);
 		
-		return (ParametresLectureSeule) parametres;
+		return parametres;
 	}
 	
 	
@@ -125,6 +127,18 @@ public class ControleurPagesFX extends ControleurPages<VuePagesFX> {
 		AfficheurPartieLocaleFX afficheur = new AfficheurPartieLocaleFX();
 		
 		FabriqueControleur.creerControleur(ControleurPartieLocaleFX.class, partie, vuePartie, afficheur);
+	}
+
+	@Override
+	protected void obtenirMessagesPourEnvoi() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void installerReceptionMessages() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

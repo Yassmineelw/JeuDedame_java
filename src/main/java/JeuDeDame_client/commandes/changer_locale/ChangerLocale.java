@@ -1,6 +1,6 @@
 package JeuDeDame_client.commandes.changer_locale;
 
-import java.util.Locale;
+import java.util.Locale; 
 
 import commun.debogage.J;
 import commun_client.commandes.Commande;
@@ -10,12 +10,14 @@ public class ChangerLocale extends Commande<ChangerLocalePourEnvoi, ChangerLocal
 	
 	private Locale locale;
 
+	@Override
 	public Locale getLocale() {
 		J.appel(this);
 
 		return locale;
 	}
 
+	@Override
 	public void setLocale(Locale locale) {
 		J.appel(this);
 

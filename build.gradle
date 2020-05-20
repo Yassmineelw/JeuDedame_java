@@ -1,44 +1,45 @@
-import org.gradle.plugins.ide.eclipse.model.AccessRule
-
 plugins {
+
     id 'java-library'
-    id 'eclipse'
+
 }
 
 java {
+
 	sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
 }
 
-eclipse {
-    classpath {
-        file {
-            whenMerged {
-                def jre = entries.find { it.path.contains 'org.eclipse.jdt.launching.JRE_CONTAINER' }
-                jre.accessRules.add(new AccessRule('0', 'javafx/**'))
-            }
-        }
-    }
-}
-
-
 repositories {
+
     jcenter()
+
 }
 
-dependencies { 
-    compile project(':commun')
-    compile project(':commun_javafx')
-    compile project(':commun_client')
+dependencies {
+
+	compile project(':commun')
+
+	compile project(':commun_javafx')
+  
+  compile project(':commun_client')
+  
+  compile project(':commun_serveur')
+implementation 'org.java-websocket:Java-WebSocket:1.4.0'
+
 }
+
 task(joueur01, dependsOn: 'classes', type: JavaExec) {
    main = 'JeuDeDame.Principal'
    classpath = sourceSets.main.runtimeClasspath
    jvmArgs('-Duser.language=fr')
 }
-
 task(joueur01En, dependsOn: 'classes', type: JavaExec) {
    main = 'JeuDeDame.Principal'
    classpath = sourceSets.main.runtimeClasspath
    jvmArgs('-Duser.language=en')
+}
+task(serveur, dependsOn: 'classes', type: JavaExec) {
+   main = 'JeuDeDame_serveur.Principal'
+   classpath = sourceSets.main.runtimeClasspath
 }

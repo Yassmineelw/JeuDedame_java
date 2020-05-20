@@ -1,6 +1,6 @@
-package JeuDeDame_client.afficheurs;
+package JeuDeDame_client.afficheurs; 
 
-import commun.debogage.J;
+import commun.debogage.J; 
 import commun_client.mvc.Afficheur;
 import JeuDeDame.modeles.parametres.ParametresLectureSeule;
 import JeuDeDame_client.vues.VueParametres;

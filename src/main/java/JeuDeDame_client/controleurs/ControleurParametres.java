@@ -1,8 +1,7 @@
 package JeuDeDame_client.controleurs;
 
-import commun.debogage.J;
+import commun.debogage.J; 
 import commun_client.mvc.controleurs.ControleurModeleVue;
-import commun_client.mvc.controleurs.RecepteurCommandeMVC;
 import JeuDeDame.modeles.parametres.Parametres;
 import JeuDeDame.modeles.parametres.ParametresLectureSeule;
 import JeuDeDame_client.afficheurs.AfficheurParametres;

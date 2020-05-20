@@ -1,12 +1,16 @@
 package JeuDeDame.modeles.partie_locale;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import commun.debogage.J;
-import commun.modeles.Modele;
+import JeuDeDame.modeles.partie.Partie;
 
-public class PartieLocale extends Modele<PartieLocaleLectureSeule> implements PartieLocaleLectureSeule {
+public class      PartieLocale 
+       extends    Partie<PartieLocaleLectureSeule> 
+       implements PartieLocaleLectureSeule { 
 	
-	
+	public PartieLocale() {
+		super();
+		J.appel(this);
+		
+		
+	}
 }

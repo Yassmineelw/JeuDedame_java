@@ -1,19 +1,18 @@
 package JeuDeDame_client.controleurs;
 
-import commun.debogage.J; 
-import commun_client.mvc.controleurs.ControleurModeleVue;
 import JeuDeDame.modeles.partie_locale.PartieLocale;
 import JeuDeDame.modeles.partie_locale.PartieLocaleLectureSeule;
 import JeuDeDame_client.afficheurs.AfficheurPartieLocale;
-
 import JeuDeDame_client.vues.VuePartieLocale;
+import commun.debogage.J;
 
-public abstract class ControleurPartieLocale<V extends VuePartieLocale,
-					       				     A extends AfficheurPartieLocale<V>> 
+public abstract class ControleurPartieLocale<V extends VuePartieLocale, 
+                                             A extends AfficheurPartieLocale<V>>
 
-					extends ControleurModeleVue<PartieLocaleLectureSeule, 
-											    PartieLocale, V, 
-											    A> {
+                extends ControleurPartie<PartieLocaleLectureSeule, 
+                                         PartieLocale, 
+                                         V, 
+                                         A> {
 	
 	@Override
 	protected void demarrer() {
@@ -27,4 +26,6 @@ public abstract class ControleurPartieLocale<V extends VuePartieLocale,
 		
 		
 	} 
+
+	
 }

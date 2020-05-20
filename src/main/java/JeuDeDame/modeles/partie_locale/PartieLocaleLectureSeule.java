@@ -1,10 +1,10 @@
 package JeuDeDame.modeles.partie_locale;
 
-import commun.modeles.ModeleLectureSeule;
+import JeuDeDame.modeles.partie.PartieLectureSeule;
 
-public interface PartieLocaleLectureSeule extends ModeleLectureSeule { 
-	
-	
+public interface PartieLocaleLectureSeule 
+       extends   PartieLectureSeule { 
+
 }
 
 
