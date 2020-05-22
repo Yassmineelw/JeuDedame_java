@@ -1,6 +1,6 @@
 package JeuDeDame.controleurs; 
 
-import java.util.Locale;
+import java.util.Locale; 
 
 import commun.debogage.J;
 import commun_client.mvc.controleurs.FabriqueControleur;

@@ -1,0 +1,45 @@
+package JeuDeDame.modeles.sauvegardes;
+
+import java.util.ArrayList;   
+import java.util.List;
+
+import JeuDeDame.modeles.sauvegardes.SauvegardesLectureSeule;
+import JeuDeDame.modeles.sauvegardes.UneSauvegarde;
+import JeuDeDame.modeles.sauvegardes.UneSauvegardeLectureSeule;
+import commun.debogage.J;
+import commun.modeles.Modele;
+
+public class Sauvegardes 
+       extends Modele<SauvegardesLectureSeule>
+	   implements SauvegardesLectureSeule {
+	
+	
+	private List<UneSauvegarde> lesSauvegardes = new ArrayList<>();
+	
+	@Override
+	public List<UneSauvegardeLectureSeule> getLesSauvegardes() {
+		J.appel(this);
+		
+		List<UneSauvegardeLectureSeule> lesSauvegardesLectureSeule = new ArrayList<>();
+		
+		for(UneSauvegarde uneSauvegarde : lesSauvegardes) {
+			
+			lesSauvegardesLectureSeule.add(uneSauvegarde);
+		}
+		
+		
+		return lesSauvegardesLectureSeule;
+	}
+	
+	public void ajouterSauvegarde(String cheminDansHome) {
+		J.appel(this);
+		
+		UneSauvegarde uneSauvegarde = new UneSauvegarde(cheminDansHome);
+
+		lesSauvegardes.add(uneSauvegarde);
+	}
+	
+	
+	
+
+}

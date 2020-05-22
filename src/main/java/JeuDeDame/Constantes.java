@@ -25,6 +25,8 @@ public class Constantes {
 	public static final String CHEMIN_PARTIE_RESEAU_FXML = "/fxml/partieReseau.xml";
 	public static final String CHEMIN_PARTIE_RESEAU_CSS = "/css/partieLocale.css";
 	
+	public static final String CHEMIN_VUE_SAUVEGARDES_FXML = "/fxml/sauvegardes.xml";
+	public static final String CHEMIN_VUE_SAUVEGARDES_CSS = "/css/sauvegardes.css";
 	public static final int LARGEUR = 600;
 	public static final int HAUTEUR = 460;
 
